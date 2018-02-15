@@ -52,7 +52,7 @@ This then renders to -
   <img src="https://i.gyazo.com/95d3cf49238a1c020230d541fdaf81ab.png" />
 </p>
 
-**Adding colors to your text**
+**Highlight the text with different colors**
 
 > This was inspired by [Titus Wormer's](http://wooorm.com) work
 
