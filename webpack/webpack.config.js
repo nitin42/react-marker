@@ -17,6 +17,7 @@ const externals = () => ({
   'retext-keywords': 'retext-keywords',
   unified: 'unified',
   'unist-util-visit': 'unist-util-visit',
+  'prop-types': 'prop-types'
 })
 
 const jsLoader = () => ({
