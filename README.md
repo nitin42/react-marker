@@ -97,7 +97,7 @@ Another example -
 
 ### Components
 
-#### Keywords
+* #### Keywords - Highlight keywords in your text.
 
 | Props        | Default value           | Description  |
 | ------------- |:-------------:| -----:|
@@ -105,7 +105,7 @@ Another example -
 | `maxKeywords`   | 5      |   Max. no of keywords to highlight |
 | `color` | `hsl(60, 91%, 83%)`      |    Color used to highlight the keywords |
 
-#### Highlight
+* #### Highlight - Highlight your text with different hue range.
 
 | Props        | Default value          | Description  |
 | ------------- |:-------------:| -----:|
