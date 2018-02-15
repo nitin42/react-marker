@@ -13,6 +13,8 @@
 npm install react-marker
 ```
 
+This package also depends on React, so make sure you've already installed it.
+
 ## Usage
 
 **Highlighting keywords**
@@ -52,7 +54,7 @@ This then renders to -
   <img src="https://i.gyazo.com/95d3cf49238a1c020230d541fdaf81ab.png" />
 </p>
 
-**Adding colors to your text**
+**Highlight the text with different colors**
 
 > This was inspired by [Titus Wormer's](http://wooorm.com) work
 
@@ -97,7 +99,9 @@ Another example -
 
 ### Components
 
-#### Keywords
+* #### Keywords
+
+Highlight keywords in your text.
 
 | Props        | Default value           | Description  |
 | ------------- |:-------------:| -----:|
@@ -105,7 +109,9 @@ Another example -
 | `maxKeywords`   | 5      |   Max. no of keywords to highlight |
 | `color` | `hsl(60, 91%, 83%)`      |    Color used to highlight the keywords |
 
-#### Highlight
+* #### Highlight
+
+Highlight your text with different hue range.
 
 | Props        | Default value          | Description  |
 | ------------- |:-------------:| -----:|
