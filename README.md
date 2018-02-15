@@ -13,6 +13,8 @@
 npm install react-marker
 ```
 
+This package also depends on React, so make sure you've already installed it.
+
 ## Usage
 
 **Highlighting keywords**
