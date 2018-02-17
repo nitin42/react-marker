@@ -8,32 +8,36 @@ import { parser } from '../utils/parser'
 import { hues } from '../styles'
 
 export class Highlight extends React.Component {
-  i = 0
+  idx = 0
 
   static propTypes = {
     text: PropTypes.string
   }
 
-  color = count => {
+  getColor = count => {
     const val = count < hues.length ? hues[count] : hues[hues.length - 1]
     return 'hsl(' + [val, '91%', '83%'].join(', ') + ')'
   }
 
   highlighter = node => marker(node, this.getElement)
 
+  getSentenceStyles = node => ({
+    backgroundColor: this.getColor(visitor(node))
+  })
+
+  getSentenceProps = (node) => ({
+    key: 'sentence - ' + this.idx,
+    style: this.getSentenceStyles(node),
+  })
+
   getElement = node => {
-    let result = 'value' in node ? node.value : this.highlighter(node)
+    const result = 'value' in node ? node.value : this.highlighter(node)
+
     if (node.type === 'SentenceNode') {
-      this.i++
-      result = React.createElement(
-        'span',
-        {
-          key: 'sentence - ' + this.i,
-          style: { backgroundColor: this.color(visitor(node)) },
-        },
-        result
-      )
+      this.idx++
+      return React.createElement('span', this.getSentenceProps(node), result)
     }
+
     return result
   }
 

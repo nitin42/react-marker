@@ -10,7 +10,7 @@ import { getHueRange } from '../styles'
 export class Keywords extends React.Component {
   keywordsStore = []
   marked = []
-  i = 0
+  idx = 0
 
   static propTypes = {
     color: PropTypes.string,
@@ -18,26 +18,26 @@ export class Keywords extends React.Component {
     text: PropTypes.string
   }
 
-  color = () => this.props.color || getHueRange()
+  getColor = () => this.props.color || getHueRange()
 
-  keywordStyles = node => ({
-    backgroundColor: this.color(visitor(node)),
+  getKeywordStyles = node => ({
+    backgroundColor: this.getColor(visitor(node)),
   })
 
-  keywordProps = (node) => ({
+  getKeywordProps = (node) => ({
     key: node.value !== undefined ? `${node.value}` : 'keyword - ' + i,
-    style: this.keywordStyles(node),
+    style: this.getKeywordStyles(node),
   })
 
   highlighter = node => marker(node, this.getElement)
 
   getElement = node => {
-    let result = 'value' in node ? node.value : this.highlighter(node)
+    const result = 'value' in node ? node.value : this.highlighter(node)
 
     if (this.keywordsStore.includes(result) && !this.marked.includes(result)) {
-      this.i++
+      this.idx++
       this.marked.push(result)
-      result = React.createElement('span', this.keywordProps(node), result)
+      return React.createElement('span', this.getKeywordProps(node), result)
     }
 
     return result
