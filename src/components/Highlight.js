@@ -8,6 +8,8 @@ import { parser } from '../utils/parser'
 import { hues } from '../styles'
 
 export class Highlight extends React.Component {
+  static displayName = "Highlight"
+  
   i = 0
 
   static propTypes = {

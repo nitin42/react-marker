@@ -8,6 +8,8 @@ import { parser } from '../utils/parser'
 import { getHueRange } from '../styles'
 
 export class Keywords extends React.Component {
+  static displayName = "Keywords"
+
   keywordsStore = []
   marked = []
   i = 0
