@@ -1,6 +1,6 @@
 {
   "name": "react-marker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Highlight keywords in your text and make your writings colorful",
   "main": "build/react-marker.min.js",
   "author": "Nitin Tulswani",
