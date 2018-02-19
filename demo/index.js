@@ -20,13 +20,13 @@ React can also render on the server using Node and power mobile apps using React
 
 class Template extends React.Component {
   state = {
-    text: TEXT,
+    text: 'H',
   }
 
   render() {
     return (
-      <div style={{ fontWeight: '12px', lineHeight: 1.7, textWrap: 'wrap', align: 'right'}}>
-        <Highlight text={this.state.text} maxKeywords={8} color="mistyrose" />
+      <div style={{ fontWeight: '12px', lineHeight: 1.7 }}>
+        <Keywords text={TEXT} maxKeywords={13} />
       </div>
 
     )
