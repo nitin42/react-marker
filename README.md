@@ -15,6 +15,10 @@ npm install react-marker
 
 This package also depends on React, so make sure you've already installed it.
 
+## Demo
+
+![demo](http://g.recordit.co/9cuduzjMYr.gif)
+
 ## Usage
 
 **Highlighting keywords**
